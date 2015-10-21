@@ -1,0 +1,102 @@
+<!--Web- to- case HTML page Ctreated by MKM on 10-sep-15 -->
+<!--web to Case form: registres new case with selected programme name -->
+<html>
+	<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+		<head>
+			<title>Enquiries </title>
+		</head>
+	<style type="text/css">
+		label{
+			color: #333;
+			font-weight: bold;
+		}
+		input{    width: 500px;}
+		td{ 	width: 300px; }
+	</style>
+	<body style="background: rgba(192, 192, 192, 0.16);">
+		
+		<form action="https://www.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+			<div>
+				<center>
+					<input type=hidden name="orgid" value="00D20000000lLXN">
+					
+					<input type=hidden name="retURL" value="http://www.lstmed.ac.uk/">
+					<h1 style="text-align: center;"> Submit your Enquiries here </h1>
+					<table >
+						<tr>
+							<td>
+								<label>Programme Name: </label>
+							</td>
+							<td>
+								<input  id="00N20000009JysW" style= "border: none; font-weight: bold;   background-color: whitesmoke;" maxlength="255" name="00N20000009JysW" size="20" type="text" readonly />
+							</td>
+						</tr> 											
+						<tr>
+							<td>
+								<label>First Name</label>
+							</td>
+							<td>
+								<input  id="00N20000009HR1A" maxlength="40" name="00N20000009HR1A" size="20" type="text" /><br>
+							</td>
+						</tr>	
+						<tr>
+							<td>
+								<label>Last Name:</label>
+							</td>
+							<td>
+								<input  id="00N20000009HR1B" maxlength="40" name="00N20000009HR1B" size="20" type="text" /><br>
+							</td>
+						</tr>					
+						<tr>
+							<td>
+								<label>Email</label>
+							</td>
+							<td>
+								<input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+							</td>
+						</tr>						
+						<tr>
+							<td>
+								<label>Phone</label>
+							</td>
+							<td>
+								<input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+							</td>
+						</tr>						
+						<tr>
+							<td>
+								<label>Subject</label>
+							</td>
+							<td>
+								<input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+							</td>
+						</tr>						
+						<tr>
+							<td>
+								<label>Description</label>
+							</td>
+							<td>
+								<textarea style="width: 500px; height: 100px;" name="description"></textarea>
+							</td>
+						</tr>							
+						
+					</table > 
+					<input type="hidden"  id="external" name="external" value="1" /><br>
+					<input type="submit" style="margin-top: 2%;width: 100px;height: 30px;" name="submit">
+				</center>
+			</div>
+		</form>
+			
+	</body>
+	<script type="text/javascript">
+		var query = window.location.search.substring(1);
+		if(query != '' ){
+			var vars = query.split("=");
+			if(vars[1] != '' ){
+				var uri_dec = decodeURIComponent(vars[1]);
+				document.getElementById('00N20000009JysW').value =uri_dec ;		
+			}
+		}
+	</script>
+</html>
